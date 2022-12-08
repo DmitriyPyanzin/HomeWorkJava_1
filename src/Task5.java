@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Task5 {
 
 //    Написать метод, который определяет, является ли год високосным,
@@ -6,6 +8,13 @@ public class Task5 {
 //    при этом каждый 400-й – високосный.
 
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите год");
+        int year = sc.nextInt();
+        sc.close();
+        System.out.println(new Task5().isLeapYear(year));
+    }
+    public boolean isLeapYear(int num) {
+        return num % 4 == 0 && num % 100 != 0 || num % 400 == 0;
     }
 }

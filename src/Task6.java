@@ -4,6 +4,18 @@ public class Task6 {
 //    Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ]. С помощью цикла и условия заменить 0 на 1, 1 на 0;
 
     public static void main(String[] args) {
+        int[] array = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        new Task6().FillAndPrintArray(array);
+        }
 
+        public void FillAndPrintArray(int[] arr) {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] == 1) {
+                    arr[i] = 0;
+                } else {
+                    arr[i] = 1;
+                }
+                System.out.print(arr[i] + " ");
+        }
     }
 }
