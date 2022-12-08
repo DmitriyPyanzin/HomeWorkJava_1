@@ -11,9 +11,14 @@ public class Task12 {
         System.out.println("Введите элементы массива через пробел");
         String[] arr = sc.nextLine().split("\\s+");
         sc.close();
-        System.out.println("Вот такой вы ввели массив");
-        t12.printArr(arr);
-        t12.findPrefix(arr);
+        if (arr.length == 0) {
+            System.out.println("В массиве нет элеменов");
+        } else {
+            System.out.println("Вот такой вы ввели массив");
+            t12.printArr(arr);
+            t12.findPrefix(arr);
+        }
+
     }
 
     public void printArr(String[] array) {
